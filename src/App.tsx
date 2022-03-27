@@ -13,7 +13,7 @@ const App: FC = () => {
   const addHandler = (event: React.FormEvent) => {
     event.preventDefault();
     if (task) {
-      setAllTask([...allTask, { text: task, uuid: Date.now() }]);
+      setAllTask([...allTask, { text: task, uuid: Date.now(), isDone: false }]);
       setTask("");
     }
   };

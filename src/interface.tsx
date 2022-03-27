@@ -3,6 +3,7 @@ import React from "react";
 export interface ITask {
   text: string;
   uuid: number;
+  isDone: boolean;
 }
 
 export interface PropsInputField {
@@ -14,8 +15,11 @@ export interface PropsInputField {
 export interface PropsTaskList {
   allTask: ITask[];
   setAllTask: React.Dispatch<React.SetStateAction<ITask[]>>;
+  // setTask: React.Dispatch<React.SetStateAction<string>>;
 }
 export interface PropsEachTask {
-  key: number;
   element: ITask;
+  allTask: ITask[];
+  setAllTask: React.Dispatch<React.SetStateAction<ITask[]>>;
+  // setTask: React.Dispatch<React.SetStateAction<string>>;
 }
