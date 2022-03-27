@@ -1,22 +1,9 @@
-import React, { FC } from "react";
+import React from "react";
+import { PropsEachTask } from "../interface";
+import "../App.css";
 
-interface IData {
-  task: string;
-  point: number;
-  uuid: number;
-}
-interface Props {
-  element: IData;
-  deleteTask(receivedId: number): void;
-}
-const EachTask = ({ element, deleteTask }: Props) => {
-  return (
-    <div>
-      {element.task}
-      {element.point}
-      <button onClick={() => deleteTask(element.uuid)}>X</button>
-    </div>
-  );
+const EachTask = ({ element }: PropsEachTask) => {
+  return <div className="singleTask">{element.text}</div>;
 };
 
 export default EachTask;
