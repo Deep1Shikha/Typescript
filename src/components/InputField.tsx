@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { PropsInputField } from "../interface";
 import "../App.css";
+import { PropsInputField } from "../interface";
 
 const InputField = ({ task, setTask, addHandler }: PropsInputField) => {
   const inputRef = useRef<HTMLInputElement>(null);

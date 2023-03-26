@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
-import { PropsEachTask } from "../interface";
+import React, { useEffect, useRef, useState } from "react";
 import "../App.css";
+import { PropsEachTask } from "../interface";
 
 const EachTask = ({ element, allTask, setAllTask }: PropsEachTask) => {
   const [edit, setEdit] = useState<boolean>(false);
@@ -61,13 +61,20 @@ const EachTask = ({ element, allTask, setAllTask }: PropsEachTask) => {
             setEdit(!edit);
           }
         }}
+        type="button"
       >
         Edit
       </button>
-      <button onClick={(event) => doneHandler(event, element.uuid)}>
+      <button
+        onClick={(event) => doneHandler(event, element.uuid)}
+        type="button"
+      >
         Done
       </button>
-      <button onClick={(event) => deleteHandler(event, element.uuid)}>
+      <button
+        onClick={(event) => deleteHandler(event, element.uuid)}
+        type="button"
+      >
         Delete
       </button>
     </form>

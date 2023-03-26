@@ -1,7 +1,7 @@
-import React, { FC } from "react";
-import EachTask from "./EachTask";
-import { PropsTaskList } from "../interface";
+import React from "react";
 import "../App.css";
+import { PropsTaskList } from "../interface";
+import EachTask from "./EachTask";
 
 const TaskList = ({ allTask, setAllTask }: PropsTaskList) => {
   return (

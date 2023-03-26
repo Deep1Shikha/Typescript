@@ -1,10 +1,9 @@
-import React, { FC, useState, ChangeEvent } from "react";
-import logo from "./logo.svg";
+import React, { FC, useState } from "react";
 import "./App.css";
-
-import TaskList from "./components/TaskList";
 import InputField from "./components/InputField";
+import TaskList from "./components/TaskList";
 import { ITask } from "./interface";
+
 
 const App: FC = () => {
   const [task, setTask] = useState<string>("");
